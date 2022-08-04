@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape>
+        <gradient android:angle="45"
+            android:startColor="#00BCD4"
+            android:centerColor="#2196F3"
+            android:endColor="#3F51B5"
+            >
+       </gradient>
+        <!--angle要45的倍數 從左上角開始逆時針轉 angle=0起始在左-->
+        <stroke android:width="2dp"
+            android:color="#000000"
+            android:dashGap="4dp"
+            android:dashWidth="2dp"></stroke><!--框線-->
+        <corners android:radius="4dp"
+            android:bottomLeftRadius="4dp"
+            android:topLeftRadius="8dp"></corners><!--圓角 4個角可以分別設定-->
+        <padding android:bottom="8dp"
+            android:top="4dp"
+            android:left="12dp"
+            android:right="12dp"></padding><!--下會把上的效果抵銷 這裡數字超過框框會跑出去-->
+    </shape>
+</item>
+</selector>
