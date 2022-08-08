@@ -25,6 +25,7 @@ public class ActivityMusic extends AppCompatActivity implements  MediaPlayer.OnC
         button_stop=findViewById(R.id.button_stop);
 
         player=MediaPlayer.create(ActivityMusic.this,R.raw.isabella);
+        //isabella is create by SLSMusic https://www.youtube.com/watch?v=NU1JWw5003U
         player.setOnCompletionListener(this);
 
         button_start.setOnClickListener(new View.OnClickListener() {
@@ -33,7 +34,7 @@ public class ActivityMusic extends AppCompatActivity implements  MediaPlayer.OnC
                 if (player!=null){
                     if (player.isPlaying()!=true){
                         player.start();
-                        textview_message.setText("播放中～");
+                        textview_message.setText("播放狀態→播放中～");
                     }
                 }
 
@@ -45,7 +46,7 @@ public class ActivityMusic extends AppCompatActivity implements  MediaPlayer.OnC
                 if (player!=null){
                     if (player.isPlaying()==true){
                         player.pause();
-                        textview_message.setText("暫停");
+                        textview_message.setText("播放狀態→暫停");
                     }
                 }
 
@@ -56,7 +57,7 @@ public class ActivityMusic extends AppCompatActivity implements  MediaPlayer.OnC
             public void onClick(View v) {
                 if (player!=null){
                     player.stop();
-                    textview_message.setText("停止播放");
+                    textview_message.setText("播放狀態→停止播放");
                     try {
                         player.prepare();
                     }catch (Exception ex){
@@ -70,7 +71,7 @@ public class ActivityMusic extends AppCompatActivity implements  MediaPlayer.OnC
     }
     @Override
     public void onCompletion(MediaPlayer m){
-        textview_message.setText("音樂播放完畢");
+        textview_message.setText("播放狀態→音樂播放完畢");
         player.seekTo(0);
     }
     @Override
