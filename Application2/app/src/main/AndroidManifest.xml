@@ -5,6 +5,10 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"
+        android:requiredFeature="true"
+    />
+
 
     <application
         android:allowBackup="true"
@@ -17,16 +21,19 @@
         android:theme="@style/Theme.Application2"
         tools:targetApi="31">
         <activity
-            android:name=".Videoctivity"
+            android:name=".CammeraActivity"
             android:exported="false" />
         <activity
             android:name=".ActivityMusic"
             android:exported="false" />
         <activity
+            android:name=".Videoctivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".CammeraActivity"
+            android:name=".GPSMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
