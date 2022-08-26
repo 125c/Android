@@ -2,32 +2,43 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="目前GPS資訊："
-    android:layout_margin="10dp"
-    android:id="@+id/textvivew_gps_information"/>
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="輸入經度"
-    android:id="@+id/textvivewLon"/>
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="輸入緯度"
-    android:id="@+id/textvivewLat"/>
-<EditText
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/edittextLon"
-    />
-<EditText
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/edittextLat"
-    />
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="目前 GPS 資訊 : "
+        android:layout_margin="10dp"
+        android:id="@+id/textview_gps_information"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="設定GPS"
+        android:id="@+id/buttonSetGPS"
+
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="取得GPS座標"
+        android:id="@+id/buttonGetGPS"
+
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="開啟地圖功能"
+        android:id="@+id/buttonShowMap"
+
+        />
+
 
 </LinearLayout>
