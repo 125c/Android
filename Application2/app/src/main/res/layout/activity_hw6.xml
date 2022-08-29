@@ -8,35 +8,38 @@
     android:orientation="vertical">
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:text="MusicActivity"
         android:id="@+id/button_MusicActivity"
         android:layout_margin="10dp"
         android:layout_weight="1"
+        android:onClick="button_Click_Music"
         />
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:text="VideoActivity"
         android:id="@+id/button_VedioActivity"
         android:layout_margin="10dp"
         android:layout_weight="1"
-        android:onClick="button_Click"
+        android:onClick="button_Click_Video"
         />
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:text="CameraActivity"
         android:id="@+id/button_CameraActivity"
         android:layout_margin="10dp"
         android:layout_weight="1"
+        android:onClick="button_Click_Camera"
         />
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:text="GPSActivity"
         android:id="@+id/button_GPSActivity"
         android:layout_margin="10dp"
         android:layout_weight="1"
+        android:onClick="button_Click_GPS"
         />
 </LinearLayout>

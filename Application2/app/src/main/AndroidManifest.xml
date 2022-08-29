@@ -31,7 +31,7 @@
             android:name=".GPSDecoActivity"
             android:exported="false" />
         <activity
-            android:name=".HW6Activity"
+            android:name=".SQLiteActivity"
             android:exported="false" />
         <activity
             android:name=".ActivityMusic"
@@ -46,7 +46,7 @@
             android:name=".VideoActivity"
             android:exported="false" />
         <activity
-            android:name=".SQLiteActivity"
+            android:name=".HW6Activity"
             android:exported="true" >
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
