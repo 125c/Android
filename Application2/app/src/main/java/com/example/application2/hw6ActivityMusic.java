@@ -8,14 +8,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class HW6 extends AppCompatActivity implements  MediaPlayer.OnCompletionListener{
+public class hw6ActivityMusic extends AppCompatActivity implements  MediaPlayer.OnCompletionListener{
     private MediaPlayer player;
     private TextView textview_message;
     private Button button_stop,button_start,button_pause;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activty_music);
+        setContentView(R.layout.activty_music);
 
         textview_message=findViewById(R.id.textview_message);
 
@@ -23,8 +23,7 @@ public class HW6 extends AppCompatActivity implements  MediaPlayer.OnCompletionL
         button_pause=findViewById(R.id.button_pause);
         button_stop=findViewById(R.id.button_stop);
 
-
-        player=MediaPlayer.create(HW6.this,R.raw.isabella);
+        player=MediaPlayer.create(hw6ActivityMusic.this,R.raw.isabella);
         //isabella is create by SLSMusic https://www.youtube.com/watch?v=NU1JWw5003U
         player.setOnCompletionListener(this);
 

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
-public class Videoctivity extends AppCompatActivity {
+public class VideoActivity extends AppCompatActivity {
     private VideoView video;
     private MediaController mController;
     private String videoFilename="point21";
@@ -23,7 +23,7 @@ public class Videoctivity extends AppCompatActivity {
         video.setVideoURI(Uri.parse(strVideoResource));
         //或 Uri videoUri=Uri.parse(strVideoResource);
         //   video.setVideoURI(videoUri);
-        mController =new MediaController(Videoctivity.this);
+        mController =new MediaController(VideoActivity.this);
         video.setMediaController(mController);
         video.start();
     }

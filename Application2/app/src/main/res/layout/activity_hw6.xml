@@ -4,46 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HW6"
+    tools:context=".HW6Activity"
     android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="MusicActivity"
-            android:id="@+id/button_MusicActivity"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="VideoActivity"
-            android:id="@+id/button_VedioActivity"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CameraActivity"
-            android:id="@+id/button_CameraActivity"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="GPSActivity"
-            android:id="@+id/button_GPSActivity"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-                />
-    </LinearLayout>
-
-
+        android:text="MusicActivity"
+        android:id="@+id/button_MusicActivity"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VideoActivity"
+        android:id="@+id/button_VedioActivity"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:onClick="button_Click"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CameraActivity"
+        android:id="@+id/button_CameraActivity"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPSActivity"
+        android:id="@+id/button_GPSActivity"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        />
 </LinearLayout>
-
