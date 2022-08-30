@@ -16,7 +16,7 @@ public class SQLiteDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String string_Sql="create table students (student_id INTEGER primary key,"+
+        String string_Sql="create table if not exists students (student_id INTEGER primary key,"+
                 "student_name TEXT not null,"+
                 "student_score REAL not null)";
         db.execSQL(string_Sql);

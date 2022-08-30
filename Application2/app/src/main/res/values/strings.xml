@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Application2</string>
+    <string name="sqlCommand">insert into students(student_id,student_name,student_score) values(5,\"阿明\",48)</string>
 </resources>

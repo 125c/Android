@@ -110,8 +110,13 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/edittext_sql"
                     android:ems="10"
-                    android:text="select * from student where student_id=1">
+                    android:text="@string/sqlCommand"
+                    >
                 </EditText>
+
+                <!--insert into students(student_id,student_name,student_score) values(5,"阿明",48)-->
+                <!--update students set(student_id=1,student_name="阿明",student_score=87)-->
+                <!--update -->
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
