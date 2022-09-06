@@ -25,6 +25,9 @@
             android:name=".MarqueeActivity"
             android:exported="false" />
         <activity
+            android:name=".DrawActivity"
+            android:exported="false" />
+        <activity
             android:name=".hw6GPSActivity"
             android:exported="false" />
         <activity
@@ -64,11 +67,10 @@
             android:name=".SQLiteActivity"
             android:exported="false" />
         <activity
-            android:name=".DrawActivity"
+            android:name=".MultiMusicActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

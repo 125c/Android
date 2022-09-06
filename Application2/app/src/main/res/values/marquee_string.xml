@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="marque_string_array">
+    <item>
+        XML-我給妳的愛寫在西元前
+    </item>
+    <item>
+        XML-深埋在美索不達米亞平原
+    </item>
+    <item>
+        XML-幾十個世紀後出土發現
+    </item>
+    <item>
+        XML-泥板上的字跡依然清晰可見
+    </item>
+    </string-array>
+</resources>

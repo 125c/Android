@@ -1,4 +1,14 @@
 <resources>
-    <string name="app_name">Application2</string>
+    <string name="app_name">愛你越久我越被動</string>
     <string name="sqlCommand">insert into students(student_id,student_name,student_score) values(5,\"阿明\",48)</string>
+    <string name="Jay">古巴比倫王頒布了漢摩拉比法典/n刻在黑色的玄武岩　距今已經三千七百多年</string>
+    <string-array name="multi_music_list">
+        <item>flu</item>
+        <item>isabella</item>
+        <item>mixed_nut</item>
+        <item>one_day</item>
+        <item>piano01</item>
+        <item>sakaume</item>
+        <item>zen</item>
+    </string-array>
 </resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/textview_Title"
+    android:text="選擇播放曲目→"
+    android:layout_margin="10dp"
+    android:textSize="20dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/spinner_music_list"
+        app:layout_constraintLeft_toRightOf="@id/textview_Title"
+        app:layout_constraintTop_toTopOf="parent"
+        android:entries="@array/multi_music_list"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview_message_output"
+        android:text="播放狀態 : "
+        android:layout_margin="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_music_list"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
