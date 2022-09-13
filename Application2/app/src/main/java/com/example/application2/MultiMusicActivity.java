@@ -15,8 +15,9 @@ Spinner spinner_music_list;
 MediaPlayer mediaPlayer_01;
 String stringSelectecMusic,stringMessageTitle="播放狀態：";
 String[] arrayMusicList;
-int i;
+int i,intSelectedMusic;
 int[] arrayMusicId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +29,11 @@ int[] arrayMusicId;
         for (i=0;i<arrayMusicList.length;i++){
             arrayMusicId[i]=getResources().getIdentifier(arrayMusicList[i],"raw",getPackageName());
         }
+        intSelectedMusic=arrayMusicId[0];
         spinner_music_list.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                intSelectedMusic=arrayMusicId[position];
                 stringSelectecMusic=arrayMusicList[position];
                 textview_message_output.setText(stringMessageTitle+"正在播放 - "+stringSelectecMusic);
                 if (mediaPlayer_01==null){
@@ -51,5 +54,46 @@ int[] arrayMusicId;
 
             }
         });
+    }
+    @Override
+    protected  void  onPause(){
+        super.onPause();
+        try {
+            if((mediaPlayer_01 !=null) &&(mediaPlayer_01.isPlaying())){
+                mediaPlayer_01.pause();
+            }
+        }catch (IllegalStateException ex){
+            ex.printStackTrace();
+        }
+    }
+    @Override
+    protected  void  onResume(){
+        super.onResume();
+        try {
+            if (mediaPlayer_01==null){
+                mediaPlayer_01=MediaPlayer.create(MultiMusicActivity.this,intSelectedMusic);
+                mediaPlayer_01.start();
+            }else {
+                mediaPlayer_01.start();
+            }
+        }catch (IllegalStateException ex){
+            ex.printStackTrace();
+        }
+    }
+    @Override
+    protected  void  onDestroy(){
+        super.onDestroy();
+        try {
+            if (mediaPlayer_01!=null){
+               if (mediaPlayer_01.isPlaying()){
+                   mediaPlayer_01.pause();
+                   mediaPlayer_01.stop();
+               }
+               mediaPlayer_01.release();
+               mediaPlayer_01=null;
+            }
+        }catch (IllegalStateException ex){
+            ex.printStackTrace();
+        }
     }
 }
