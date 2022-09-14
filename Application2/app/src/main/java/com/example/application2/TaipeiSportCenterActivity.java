@@ -73,7 +73,7 @@ public class TaipeiSportCenterActivity extends AppCompatActivity {
                                 strCenterAddress = jsonObject_center.getString("地址");
                                 strLat=jsonObject_center.getString("緯度");
                                 strLng=jsonObject_center.getString("經度");
-                                taipei_sport_center_arrayListOfString.add(strCenterName + "-\n" + strCenterAddress+"\n座標:"+strLat+","+strLng);
+                                taipei_sport_center_arrayListOfString.add(strCenterName + "-\n" + strCenterAddress+"\n座標 :"+strLat+","+strLng);
                             }
                             taipei_sport_center_arrayAdapterOfString = new ArrayAdapter<String>(TaipeiSportCenterActivity.this, android.R.layout.simple_list_item_1, taipei_sport_center_arrayListOfString);
                             taipei_sport_center_listview_apidata.setAdapter(taipei_sport_center_arrayAdapterOfString);
@@ -84,7 +84,7 @@ public class TaipeiSportCenterActivity extends AppCompatActivity {
 //                                    Toast.makeText(TaipeiSportCenterActivity.this,
 //                                            "已讀取:"+taipei_sport_center_arrayListOfString.get(position),
 //                                            Toast.LENGTH_SHORT).show();
-                                    int intStartOfGeo=taipei_sport_center_arrayListOfString.get(position).indexOf("座標:");
+                                    int intStartOfGeo=taipei_sport_center_arrayListOfString.get(position).indexOf("座標 :");
                                     String strGeoPosition=taipei_sport_center_arrayListOfString.get(position).substring(intStartOfGeo+4);
 
                                     String strlabel=strLat+","+strLng+"(中心位置)";
